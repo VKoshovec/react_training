@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Contacts from './components/Contacts';
 import { Routes, Route, NavLink  } from 'react-router-dom';
+import { Children } from 'react';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <Route path='/' element={ <Home/> } />
       <Route path='/about' element={ <About/> } />
       <Route path='/contacts' element={ <Contacts/> } />
-      <Route path='*' element={ <div>Bad adress</div> }/>
+      <Route path='/contacts/:id' element={ <div>{ Children }</div> } />
+      <Route path='*' element={ <div>Bad adress</div> } />
     </Routes>  
     </div>
   );
